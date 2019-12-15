@@ -94,9 +94,8 @@ class PartnerController  extends Controller
      */
     public function edit($id)
     {   
-        // $data = Pengajuan::findOrFail($id);
-        $datas = Partner::get();
-        return view('partner.edit',compact('datas'));
+        $data = Partner::findOrFail($id);
+        return view('partner.edit',compact('data'));
     }
 
     /**
